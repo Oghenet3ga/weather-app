@@ -1,0 +1,173 @@
+body {
+  background: #e0ebeb;
+  background-position: center center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+  font-family: "Noto Serif Lao", serif;
+}
+#bg {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/072/151/original/weather2.jpg?1679011795");
+}
+.container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1000px;
+}
+.card {
+  width: 775px;
+  height: 700px;
+  border-radius: 15px;
+  border: 1px solid white;
+}
+.weather {
+  margin: -5px 60px;
+}
+.form-control {
+  background: #eeeeee;
+  margin-left: -445px;
+  width: 470px;
+  line-height: 2.7;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+#search-button {
+  background: #9896f1;
+  margin: 3px -15px;
+  line-height: 35px;
+  display: block;
+  border: 1px solid white;
+  color: black;
+  padding: 8px 8px;
+  border-radius: 5px;
+  width: 80px;
+  transition: all 150ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+#search-button:hover {
+  border: 1px solid white;
+  background: #d9d5ef;
+}
+#current-location {
+  position: relative;
+  left: 90px;
+  top: -56px;
+  background: #d9d5ef;
+  margin: 3px -15px;
+  line-height: 35px;
+  display: block;
+  border: 1px solid white;
+  color: black;
+  padding: 8px 3px;
+  border-radius: 5px;
+  width: 95px;
+  transition: all 150ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+#current-location:hover {
+  border: 1px solid white;
+  background: #9896f1;
+}
+h1 {
+  line-height: 5px;
+  padding-bottom: 10px;
+  margin-top: -95px;
+  font-weight: bold;
+  font-size: 50px;
+}
+.current {
+  line-height: 30px;
+  margin-top: -34px;
+}
+#currentdt {
+  font-size: 18px;
+  position: relative;
+  top: -20px;
+  color: #6f5db7;
+}
+#description {
+  text-transform: capitalize;
+}
+.specs {
+  color: #6f5db7;
+}
+.temp {
+  position: relative;
+  left: 160px;
+  margin-top: -60px;
+  line-height: 30px;
+  padding-top: -10px;
+  padding-bottom: 20px;
+  width: 350px;
+  font-size: 60px;
+}
+
+.img1 {
+  position: relative;
+  left: 85px;
+  margin-top: 1px;
+  line-height: 30px;
+  padding-top: -10px;
+  padding-bottom: 20px;
+  width: 60px;
+}
+#units {
+  font-size: 17px;
+  position: relative;
+  top: -30px;
+  left: -13px;
+}
+
+#celsius-unit {
+  text-decoration: none;
+  color: #6f5db7;
+}
+#celsius-unit:hover {
+  text-decoration: underline;
+}
+#far-unit {
+  text-decoration: none;
+  color: #6f5db7;
+}
+#far-unit:hover {
+  text-decoration: underline;
+}
+.futureT {
+  margin-top: -25px;
+  margin-left: 6px;
+  padding-left: -550px;
+  padding-right: 225px;
+  width: 1000px;
+  line-height: 50px;
+}
+.futureDay {
+  font-weight: bold;
+  font-size: 18px;
+}
+.futureImg {
+  width: 50px;
+}
+.highLow {
+  font-weight: bold;
+  width: 86px;
+  margin-left: 8px;
+}
+.high {
+  color: #6f5db7;
+}
+.low {
+  color: #9896f1;
+}
+hr {
+  margin-top: -5px;
+
+  color: #9896f1;
+}
+p {
+  margin: 0 auto;
+  text-align: center;
+  color: gray;
+  font-size: 15px;
+}
