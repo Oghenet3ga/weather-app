@@ -18,30 +18,36 @@ current.innerHTML = `<strong>${day} ${hours}:${mins}</strong>`;
 //Display live Weather feed when city search is submitted via API
 function displayTemperature(response) {
   let city = document.querySelector("h1");
-  city.innerHTML = response.data.name;
+  city.innerHTML = response.data.city;
 
-  celunit = Math.round(response.data.main.temp);
+  celunit = Math.round(response.data.temperature.current);
 
-  let currentTemp = Math.round(response.data.main.temp);
+  let currentTemp = Math.round(response.data.temperature.current);
   let Temp = document.querySelector("#ctemp");
   Temp.innerHTML = currentTemp;
 
   let descrip = document.querySelector("#description");
-  descrip.innerHTML = response.data.weather[0].description;
+  descrip.innerHTML = response.data.condition.description;
 
   let humid = document.querySelector("#humidity");
-  humid.innerHTML = response.data.main.humidity;
+  humid.innerHTML = response.data.temperature.humidity;
 
   let windSpeed = document.querySelector("#speed");
   windSpeed.innerHTML = response.data.wind.speed;
+
+  let icon = document.querySelector(".img1");
+  icon.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
 }
 
 function currentT(event) {
   event.preventDefault();
 
-  let apiID = "58a6775f97527351bf6c6966e209be39";
+  let apiID = "cf2ff9ed45fc3b4odc651t03e545b4da";
   let cityInput = document.querySelector("#city-input");
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=metric&appid=${apiID}`;
+  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${cityInput.value}&key=${apiID}&units=metric`;
 
   axios.get(apiURL).then(displayTemperature);
 }
@@ -57,9 +63,8 @@ function currentLoc(event) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
 
-    let apiID = "58a6775f97527351bf6c6966e209be39";
-    let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiID}`;
-
+    let apiID = "cf2ff9ed45fc3b4odc651t03e545b4da";
+    let apiURL = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiID}&units=metric`;
     axios.get(apiURL).then(displayTemperature);
   }
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -102,8 +107,8 @@ convertCel.addEventListener("click", showUnitC);
 
 //Setting a default city displaying live weather feed on load
 function search(city) {
-  let apiID = "58a6775f97527351bf6c6966e209be39";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiID}`;
+  let apiID = "cf2ff9ed45fc3b4odc651t03e545b4da";
+  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiID}&units=metric`;
 
   axios.get(apiURL).then(displayTemperature);
 }
