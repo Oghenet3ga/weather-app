@@ -55,24 +55,6 @@ function currentT(event) {
 let showTemp = document.querySelector("#search-button");
 showTemp.addEventListener("click", currentT);
 
-//Display live weather feed based on current location via lon&lat using API
-function currentLoc(event) {
-  event.preventDefault();
-
-  function showPosition(position) {
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
-
-    let apiID = "cf2ff9ed45fc3b4odc651t03e545b4da";
-    let apiURL = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiID}&units=metric`;
-    axios.get(apiURL).then(displayTemperature);
-  }
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
-
-let showLocation = document.querySelector("#current-location");
-showLocation.addEventListener("click", currentLoc);
-
 //Temp Conversion
 function showUnitF(event) {
   event.preventDefault();

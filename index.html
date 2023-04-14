@@ -27,16 +27,23 @@
           <div class="container">
             <div class="row">
               <div class="col">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="city-input"
-                  placeholder="Type a city.."
-                />
-              </div>
-              <div class="col">
-                <button type="submit" id="search-button">Search</button>
-                <button type="submit" id="current-location">Current 📍</button>
+                <form>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city-input"
+                    placeholder="Type a city.."
+                    autocomplete="off"
+                    autofocus="on"
+                  />
+
+                  <input
+                    type="submit"
+                    id="search-button"
+                    value="Search"
+                    class="btn btn-primary"
+                  />
+                </form>
               </div>
             </div>
           </div>

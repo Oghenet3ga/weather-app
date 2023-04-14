@@ -17,7 +17,7 @@ body {
   min-width: 1000px;
 }
 .card {
-  width: 775px;
+  width: 750px;
   height: 700px;
   border-radius: 15px;
   border: 1px solid white;
@@ -27,22 +27,26 @@ body {
 }
 .form-control {
   background: #eeeeee;
-  margin-left: -445px;
+  position: relative;
+  top: -10px;
+  margin-left: -435px;
   width: 470px;
   line-height: 2.7;
   border: 1px solid white;
   border-radius: 5px;
 }
 #search-button {
+  position: relative;
+  left: 50px;
+  top: -65px;
   background: #9896f1;
-  margin: 3px -15px;
   line-height: 35px;
   display: block;
   border: 1px solid white;
   color: black;
   padding: 8px 8px;
   border-radius: 5px;
-  width: 80px;
+  width: 130px;
   transition: all 150ms ease;
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
 }
@@ -135,7 +139,7 @@ h1 {
 
 .futureT {
   margin-top: -25px;
-  margin-left: 6px;
+  margin-left: -14px;
   padding-left: -550px;
   padding-right: 225px;
   width: 1000px;
@@ -161,7 +165,7 @@ h1 {
 }
 hr {
   margin-top: -15px;
-
+  text-align: center;
   color: #9896f1;
 }
 p {
