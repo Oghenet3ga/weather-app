@@ -103,7 +103,20 @@ h1 {
   width: 350px;
   font-size: 60px;
 }
-
+.temp .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.temp .active:hover {
+  text-decoration: none;
+}
+#celsius-unit {
+  text-decoration: none;
+}
+#far-unit {
+  text-decoration: none;
+}
 .img1 {
   position: relative;
   left: 85px;
@@ -120,20 +133,6 @@ h1 {
   left: -13px;
 }
 
-#celsius-unit {
-  text-decoration: none;
-  color: #6f5db7;
-}
-#celsius-unit:hover {
-  text-decoration: underline;
-}
-#far-unit {
-  text-decoration: none;
-  color: #6f5db7;
-}
-#far-unit:hover {
-  text-decoration: underline;
-}
 .futureT {
   margin-top: -25px;
   margin-left: 6px;
