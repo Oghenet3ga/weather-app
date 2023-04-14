@@ -33,7 +33,7 @@ function displayTemperature(response) {
   humid.innerHTML = response.data.main.humidity;
 
   let windSpeed = document.querySelector("#speed");
-  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  windSpeed.innerHTML = response.data.wind.speed;
 }
 
 function currentT(event) {

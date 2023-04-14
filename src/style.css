@@ -160,7 +160,7 @@ h1 {
   color: #9896f1;
 }
 hr {
-  margin-top: -5px;
+  margin-top: -15px;
 
   color: #9896f1;
 }
@@ -168,8 +168,8 @@ p {
   margin: 0 auto;
   text-align: center;
   color: gray;
-  font-size: 15px;
+  font-size: 14px;
 }
-#openSource {
+#footerLink {
   color: #6f5db7;
 }
