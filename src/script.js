@@ -87,6 +87,118 @@ convertFar.addEventListener("click", showUnitF);
 let convertCel = document.querySelector("#celsius-unit");
 convertCel.addEventListener("click", showUnitC);
 
+//Weather Forecast
+function displayForecast() {
+  let forecast = document.querySelector("#Wforecast");
+  forecast.innerHTML = `<div class="row">
+                <div class="col-2">
+                  <div class="futureDay">
+                    <div class="col-12">Fri</div>
+                  </div>
+                  <div class="col-12">
+                    <img
+                      src="src/images/white-sun-with-small-cloud_1f324.png"
+                      class="futureImg"
+                    />
+                  </div>
+                  <div class="highLow">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="high">31°<sup>c</sup></div>
+                      </div>
+                      <div class="col-6">
+                        <div class="low">28°<sup>c</sup></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="futureDay">
+                    <div class="col-12">Sat</div>
+                  </div>
+                  <div class="col-12">
+                    <img
+                      src="src/images/white-sun-with-small-cloud_1f324.png"
+                      class="futureImg"
+                    />
+                  </div>
+                  <div class="highLow">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="high">31°<sup>c</sup></div>
+                      </div>
+                      <div class="col-6">
+                        <div class="low">28°<sup>c</sup></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="futureDay">
+                    <div class="col-12">Sun</div>
+                  </div>
+                  <div class="col-12">
+                    <img
+                      src="src/images/white-sun-with-small-cloud_1f324.png"
+                      class="futureImg"
+                    />
+                  </div>
+                  <div class="highLow">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="high">31°<sup>c</sup></div>
+                      </div>
+                      <div class="col-6">
+                        <div class="low">28°<sup>c</sup></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="futureDay">
+                    <div class="col-12">Mon</div>
+                  </div>
+                  <div class="col-12">
+                    <img
+                      src="src/images/white-sun-with-small-cloud_1f324.png"
+                      class="futureImg"
+                    />
+                  </div>
+                  <div class="highLow">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="high">31°<sup>c</sup></div>
+                      </div>
+                      <div class="col-6">
+                        <div class="low">28°<sup>c</sup></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="futureDay">
+                    <div class="col-12">Tue</div>
+                  </div>
+                  <div class="col-12">
+                    <img
+                      src="src/images/white-sun-with-small-cloud_1f324.png"
+                      class="futureImg"
+                    />
+                  </div>
+                  <div class="highLow">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="high">31°<sup>c</sup></div>
+                      </div>
+                      <div class="col-6">
+                        <div class="low">28°<sup>c</sup></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>`;
+}
+
 //Setting a default city displaying live weather feed on load
 function search(city) {
   let apiID = "cf2ff9ed45fc3b4odc651t03e545b4da";
@@ -95,3 +207,4 @@ function search(city) {
   axios.get(apiURL).then(displayTemperature);
 }
 search("Lagos");
+displayForecast();
