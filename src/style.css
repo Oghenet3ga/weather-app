@@ -85,7 +85,10 @@ h1 {
   line-height: 30px;
   margin-top: -34px;
 }
-#currentdt {
+#last {
+  color: black;
+}
+.currentd {
   font-size: 18px;
   position: relative;
   top: -20px;
