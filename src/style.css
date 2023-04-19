@@ -151,15 +151,15 @@ h1 {
 .futureDay {
   font-weight: bold;
   font-size: 18px;
-  margin-left: 1px;
+  margin-left: -3px;
 }
 .futureImg {
-  width: 70px;
+  width: 85px;
 }
 .highLow {
   font-weight: bold;
   width: 86px;
-  margin-left: 9px;
+  margin-left: 10px;
 }
 .high {
   color: #6f5db7;
@@ -168,7 +168,7 @@ h1 {
   color: #9896f1;
 }
 hr {
-  margin-top: -20px;
+  margin-top: -30px;
   text-align: center;
   color: #9896f1;
 }
