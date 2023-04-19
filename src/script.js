@@ -15,6 +15,14 @@ let mins = String(now.getMinutes()).padStart(2, "0");
 let current = document.querySelector("#currentdt");
 current.innerHTML = `<strong>${day} ${hours}:${mins}</strong>`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 //Defining forecast function
 function getForecast(coordinates) {
   let apiID = "cf2ff9ed45fc3b4odc651t03e545b4da";
@@ -67,8 +75,46 @@ showTemp.addEventListener("click", currentT);
 
 //Display Forecast
 function displayForecast(response) {
-  //let forecast = document.querySelector("#Wforecast");
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#Wforecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
+    <div class="futureDay">
+      <div class="col-12">${formatDay(forecastDay.time)}</div>
+    </div>
+    <div class="col-12">
+      <img
+        src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+          forecastDay.condition.icon
+        }.png"
+        class="futureImg"
+      />
+    </div>
+    <div class="highLow">
+      <div class="row">
+        <div class="col-6">
+          <div class="high">${Math.round(
+            forecastDay.temperature.maximum
+          )}°<sup>c</sup></div>
+        </div>
+        <div class="col-6">
+          <div class="low">${Math.round(
+            forecastDay.temperature.minimum
+          )}°<sup>c</sup></div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+    }
+  });
+
+  forecastElement.innerHTML = forecastHTML;
 }
 
 //Temp Conversion
