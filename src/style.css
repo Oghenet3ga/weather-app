@@ -1,13 +1,11 @@
 body {
-  background: #e0ebeb;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/940/original/eberhard-grossgasteiger-J9NDmBVhN04-unsplash.jpg?1681922246");
   background-position: center center;
   background-repeat: no-repeat;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   font-family: "Roboto Slab", serif;
 }
-#bg {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/072/151/original/weather2.jpg?1679011795");
-}
+
 .container {
   padding-top: 80px;
   padding-bottom: 80px;
