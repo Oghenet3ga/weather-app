@@ -54,7 +54,7 @@ function displayTemperature(response) {
   let icon = document.querySelector(".img1");
   icon.setAttribute(
     "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    `https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 
   getForecast(response.data.coordinates);
