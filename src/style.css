@@ -144,7 +144,7 @@ h1 {
   padding-left: -550px;
   padding-right: 225px;
   width: 1000px;
-  line-height: 40px;
+  line-height: 50px;
 }
 .futureDay {
   font-weight: bold;
@@ -152,7 +152,7 @@ h1 {
   margin-left: -3px;
 }
 .futureImg {
-  width: 50px;
+  width: 70px;
 }
 .highLow {
   font-weight: bold;
@@ -166,7 +166,7 @@ h1 {
   color: #9896f1;
 }
 hr {
-  margin-top: -30px;
+  margin-top: -20px;
   text-align: center;
   color: #9896f1;
 }
